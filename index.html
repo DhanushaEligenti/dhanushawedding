@@ -191,7 +191,7 @@ h2.script{font-size:clamp(36px,8.5vw,62px);margin:8px 0 6px}
 blockquote.quotes{padding:14px 4px}
 .quotes blockquote{padding:14px 8px;display:flex;flex-direction:column;justify-content:center;min-height:210px}
 .quotes q{font-size:clamp(21px,5vw,30px);font-style:italic;line-height:1.55;quotes:"\201C" "\201D"}
-.quotes cite{display:block;margin-top:14px;font:600 15px var(--caps);letter-spacing:.16em;font-style:normal;color:var(--pink)}
+.quotes cite{display:block;margin-top:14px;line-height:1.7;font:600 15px var(--caps);letter-spacing:.16em;font-style:normal;color:var(--pink)}
 
 /* footer */
 .foot .script{font-size:clamp(34px,8vw,62px)}
@@ -460,7 +460,7 @@ html[lang=te] .hero>.txt{padding-left:6px!important;padding-right:6px!important}
   <div class="card" style="width:min(94vw,680px)">
     <p class="caps rv" data-t="q_cap">Words of Love</p>
     <h2 class="script gold rv" style="--d:.1s" data-t="q_h">With Blessings</h2>
-    <blockquote class="quotes rv z" style="--d:.2s"><q data-t="q_q">Today, two hearts become one and two families become one family. With joyful hearts and folded hands, we invite you to bless our Dhanusha and Madhu. May their love grow stronger with every sunrise, and may your presence and blessings make their special day truly unforgettable.</q><cite data-t="q_c">— Eligenti's Family</cite></blockquote>
+    <blockquote class="quotes rv z" style="--d:.2s"><q data-t="q_q">Today, two hearts become one and two families become one family. With joyful hearts and folded hands, we invite you to bless our Dhanusha and Madhu. May their love grow stronger with every sunrise, and may your presence and blessings make their special day truly unforgettable.</q><cite data-t="q_c">— Eligenti Veerabhadra Rao<br>Eligenti Mangaveni</cite></blockquote>
   </div>
 </section>
 
@@ -568,7 +568,7 @@ const IMG = {"couple": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDA
     q_cap: 'ప్రేమ పలుకులు',
     q_h: 'ఆశీస్సులతో',
     q_q: 'ఈ రోజు రెండు హృదయాలు ఒక్కటవుతున్నాయి, రెండు కుటుంబాలు ఒకే కుటుంబంగా మారుతున్నాయి. సంతోషంతో, చేతులెత్తి మా ధనుష, మధులను ఆశీర్వదించడానికి మిమ్మల్ని ఆహ్వానిస్తున్నాము. వారి ప్రేమ ప్రతి ఉదయంతో మరింత బలపడాలని, మీ రాక మరియు ఆశీస్సులు వారి ప్రత్యేక దినాన్ని మరపురానిదిగా మార్చాలని కోరుకుంటున్నాము.',
-    q_c: '— ఎలిగంటి కుటుంబం',
+    q_c: '— ఎలిగంటి వీరభద్రరావు<br>ఎలిగంటి మంగవేణి',
     e_cap: 'ప్రేమ &amp; ఆశీస్సులతో',
     e_h: 'పెళ్లిలో కలుద్దాం!',
     e_p: 'మీతో కలిసి వేడుక జరుపుకోవడానికి మేము ఎదురుచూస్తున్నాము.<br>మా కథలో భాగమైనందుకు ధన్యవాదాలు.',
@@ -608,7 +608,7 @@ const IMG = {"couple": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDA
   setLang(saved === 'en' ? 'en' : 'te');   // Telugu is the default; English only if chosen via the toggle or ?lang=en
 
   /* ---------- background music: YouTube player, audio only, loops from 0:02 ---------- */
-  const VID = 'TqrPYfn1yUM', START = 2, musicBtn = $('#music');
+  const VID = 'qg1DHoFbn0I', START = 50, musicBtn = $('#music');
   let yt = null, ytReady = false, wantPlay = false, userMuted = false;
   function playMusic() { wantPlay = true; if (ytReady && !userMuted) { try { yt.playVideo(); } catch (e) {} } }
   window.onYouTubeIframeAPIReady = () => {
