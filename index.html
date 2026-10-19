@@ -129,8 +129,8 @@ h2.script{font-size:clamp(36px,8.5vw,62px);margin:8px 0 6px}
 .hero .full{font-family:var(--caps);font-weight:600;letter-spacing:.1em;line-height:1.6;font-size:clamp(14px,3.6vw,18px);color:var(--ink)}
 .hero .when{margin-top:22px;text-wrap:balance;font-size:clamp(17px,4.6vw,26px);font-weight:600;color:var(--deep)}
 .hero .tag{font-size:1.1em;font-style:italic}
-.cue{position:absolute!important;bottom:22px;left:50%;transform:translateX(-50%);animation:bob 1.8s infinite}
-.cue svg{width:26px;height:26px}
+.cue{position:absolute!important;bottom:22px;left:50%;translate:-50% 0}
+
 @keyframes bob{50%{transform:translate(-50%,10px)}}
 .heart{color:var(--pink);display:inline-block;animation:beat 1.4s infinite}
 
@@ -219,6 +219,17 @@ footer small{display:block;margin-top:18px;opacity:.75;font-size:.75em}
 .gal img{will-change:transform;animation:kb2 16s ease-in-out infinite alternate}
 @keyframes kb2{to{transform:scale(1.1) translate(-2%,-1%)}}
 .person .circ img,.ganesha img{will-change:transform}
+/* next / back buttons */
+.nxt{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:13px 26px;border-radius:50px;font-family:var(--caps);font-weight:600;letter-spacing:.14em;font-size:clamp(13px,3.4vw,15px);text-transform:uppercase;color:var(--deep);background:linear-gradient(135deg,#fff3c4,#f5c542 60%,#e0b43a);border:1.5px solid var(--gold);box-shadow:0 8px 20px rgba(168,122,16,.35);transition:transform .3s,box-shadow .3s,opacity .9s ease var(--d,0s)}
+.nxt svg{width:18px;height:18px;animation:nudge 1.6s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateY(4px)}}
+.nxt.up svg{animation-name:nudgeUp}
+@keyframes nudgeUp{50%{transform:translateY(-4px)}}
+.nxt:hover{transform:translateY(-3px) scale(1.04)}
+.nxt:active{transform:scale(.96)}
+.card.green .nxt{background:linear-gradient(135deg,#f5c542,#e0b43a);}
+.cue.nxt{margin:0;padding:11px 22px;bottom:22px}
+.cue.nxt svg{stroke:currentColor}
 @media (max-width:600px){
   .hero>div{padding:20px 10px!important}
   .hero .caps{font-size:15px;letter-spacing:.2em;line-height:1.5}
@@ -266,7 +277,7 @@ footer small{display:block;margin-top:18px;opacity:.75;font-size:.75em}
     <p class="when rv" style="--d:.5s">Thursday, 29th October 2026 &nbsp;•&nbsp; 7:30 PM</p>
     <p class="tag rv" style="--d:.6s">Let the celebrations begin!</p>
   </div>
-  <a class="cue" href="#blessing" aria-label="Scroll down"><svg viewBox="0 0 24 24" fill="none" stroke="#8d6410" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
+  <a class="cue nxt" href="#blessing" aria-label="Next section">Next <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
 </section>
 
 <!-- blessing -->
@@ -409,6 +420,23 @@ const IMG = {"couple": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDA
   $('#open').onclick = openGate;
   $('#gan').onclick = openGate;
   if (location.hash === '#open') { openGate(); $$('.rv,.card').forEach(e => e.classList.add('in', 'settled')); }
+
+  /* ---------- next / back buttons on every screen ---------- */
+  const secs = $$('main .sec');
+  const arrow = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="${d}"/></svg>`;
+  secs.forEach((sec, i) => {
+    const card = sec.querySelector('.card'); if (!card) return;
+    const last = i === secs.length - 1, a = document.createElement('a');
+    a.className = 'nxt rv' + (last ? ' up' : ''); a.style.setProperty('--d', '.5s');
+    a.href = '#' + (last ? secs[0].id : secs[i + 1].id);
+    a.innerHTML = last ? 'Back to top ' + arrow('M6 15l6-6 6 6') : 'Next ' + arrow('M6 9l6 6 6-6');
+    card.appendChild(a);
+  });
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a.nxt'); if (!a) return;
+    e.preventDefault(); const t = $(a.getAttribute('href'));
+    if (t) t.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+  });
 
   /* ---------- background follows the section in view ---------- */
   const bio = new IntersectionObserver(es => es.forEach(e => {
