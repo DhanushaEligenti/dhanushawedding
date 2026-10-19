@@ -220,7 +220,7 @@ footer small{display:block;margin-top:18px;opacity:.75;font-size:.75em}
 @keyframes kb2{to{transform:scale(1.1) translate(-2%,-1%)}}
 .person .circ img,.ganesha img{will-change:transform}
 /* next / back buttons */
-.nxt{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:13px 26px;border-radius:50px;font-family:var(--caps);font-weight:600;letter-spacing:.14em;font-size:clamp(13px,3.4vw,15px);text-transform:uppercase;color:var(--deep);background:linear-gradient(135deg,#fff3c4,#f5c542 60%,#e0b43a);border:1.5px solid var(--gold);box-shadow:0 8px 20px rgba(168,122,16,.35);transition:transform .3s,box-shadow .3s,opacity .9s ease var(--d,0s)}
+.nxt{display:inline-flex;align-items:center;justify-content:center;gap:10px;margin-top:26px;padding:13px 24px;max-width:100%;text-align:center;white-space:nowrap;border-radius:50px;font-family:var(--caps);font-weight:600;letter-spacing:.14em;font-size:clamp(13px,3.4vw,15px);text-transform:uppercase;color:var(--deep);background:linear-gradient(135deg,#fff3c4,#f5c542 60%,#e0b43a);border:1.5px solid var(--gold);box-shadow:0 8px 20px rgba(168,122,16,.35);transition:transform .3s,box-shadow .3s,opacity .9s ease var(--d,0s)}
 .nxt svg{width:18px;height:18px;animation:nudge 1.6s ease-in-out infinite}
 @keyframes nudge{50%{transform:translateY(4px)}}
 .nxt.up svg{animation-name:nudgeUp}
@@ -277,7 +277,7 @@ footer small{display:block;margin-top:18px;opacity:.75;font-size:.75em}
     <p class="when rv" style="--d:.5s">Thursday, 29th October 2026 &nbsp;•&nbsp; 7:30 PM</p>
     <p class="tag rv" style="--d:.6s">Let the celebrations begin!</p>
   </div>
-  <a class="cue nxt" href="#blessing" aria-label="Next section">Next <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
+  <a class="cue nxt" href="#blessing" aria-label="Seek blessings">Begin the Journey <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
 </section>
 
 <!-- blessing -->
@@ -423,13 +423,14 @@ const IMG = {"couple": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDA
 
   /* ---------- next / back buttons on every screen ---------- */
   const secs = $$('main .sec');
+  const LABELS = ['Begin the Journey', 'Meet the Couple', 'Count the Days', 'Mark the Date', 'See Our Moments', 'Read the Blessings', 'One Last Wish', 'Relive the Magic'];
   const arrow = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="${d}"/></svg>`;
   secs.forEach((sec, i) => {
     const card = sec.querySelector('.card'); if (!card) return;
     const last = i === secs.length - 1, a = document.createElement('a');
     a.className = 'nxt rv' + (last ? ' up' : ''); a.style.setProperty('--d', '.5s');
     a.href = '#' + (last ? secs[0].id : secs[i + 1].id);
-    a.innerHTML = last ? 'Back to top ' + arrow('M6 15l6-6 6 6') : 'Next ' + arrow('M6 9l6 6 6-6');
+    a.innerHTML = LABELS[i] + ' ' + arrow(last ? 'M6 15l6-6 6 6' : 'M6 9l6 6 6-6');
     card.appendChild(a);
   });
   document.addEventListener('click', e => {
