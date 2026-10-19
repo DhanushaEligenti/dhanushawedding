@@ -267,6 +267,61 @@ html[lang=te] .hero .full{font-size:clamp(18px,4.6vw,28px);line-height:1.7;font-
 html[lang=te] .hero .when{font-size:clamp(19px,5vw,34px);line-height:1.55;font-weight:700}
 html[lang=te] .hero .tag{font-size:clamp(21px,5.2vw,30px);line-height:1.6;font-weight:600}
 html[lang=te] .hero>.txt{padding-left:6px!important;padding-right:6px!important}
+
+/* ===== card ornaments, medallions, icons ===== */
+.card{position:relative;z-index:1;padding-top:calc(clamp(26px,5vw,52px) + 30px)}
+.card::before{content:'';position:absolute;inset:8px;pointer-events:none;border-radius:24px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2246%22%20height%3D%2246%22%20viewBox%3D%220%200%2046%2046%22%3E%3Cg%20%20fill%3D%22none%22%20stroke%3D%22%23c9992a%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M3%2043V16C3%208%208%203%2016%203H43%22/%3E%3Cpath%20d%3D%22M9%2039V20c0-6%205-11%2011-11h19%22%20stroke-width%3D%221%22%20opacity%3D%22.8%22/%3E%3Ccircle%20cx%3D%2211%22%20cy%3D%2211%22%20r%3D%223%22%20fill%3D%22%23c9992a%22%20stroke%3D%22none%22/%3E%3Cpath%20d%3D%22M3%2024c4%200%206-2%206-6M24%203c0%204-2%206-6%206%22%20stroke-width%3D%221.2%22/%3E%3C/g%3E%3C/svg%3E") left top/46px 46px no-repeat,url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2246%22%20height%3D%2246%22%20viewBox%3D%220%200%2046%2046%22%3E%3Cg%20transform%3D%22translate%2846%200%29%20scale%28-1%201%29%22%20fill%3D%22none%22%20stroke%3D%22%23c9992a%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M3%2043V16C3%208%208%203%2016%203H43%22/%3E%3Cpath%20d%3D%22M9%2039V20c0-6%205-11%2011-11h19%22%20stroke-width%3D%221%22%20opacity%3D%22.8%22/%3E%3Ccircle%20cx%3D%2211%22%20cy%3D%2211%22%20r%3D%223%22%20fill%3D%22%23c9992a%22%20stroke%3D%22none%22/%3E%3Cpath%20d%3D%22M3%2024c4%200%206-2%206-6M24%203c0%204-2%206-6%206%22%20stroke-width%3D%221.2%22/%3E%3C/g%3E%3C/svg%3E") right top/46px 46px no-repeat,url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2246%22%20height%3D%2246%22%20viewBox%3D%220%200%2046%2046%22%3E%3Cg%20transform%3D%22translate%280%2046%29%20scale%281%20-1%29%22%20fill%3D%22none%22%20stroke%3D%22%23c9992a%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M3%2043V16C3%208%208%203%2016%203H43%22/%3E%3Cpath%20d%3D%22M9%2039V20c0-6%205-11%2011-11h19%22%20stroke-width%3D%221%22%20opacity%3D%22.8%22/%3E%3Ccircle%20cx%3D%2211%22%20cy%3D%2211%22%20r%3D%223%22%20fill%3D%22%23c9992a%22%20stroke%3D%22none%22/%3E%3Cpath%20d%3D%22M3%2024c4%200%206-2%206-6M24%203c0%204-2%206-6%206%22%20stroke-width%3D%221.2%22/%3E%3C/g%3E%3C/svg%3E") left bottom/46px 46px no-repeat,url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2246%22%20height%3D%2246%22%20viewBox%3D%220%200%2046%2046%22%3E%3Cg%20transform%3D%22translate%2846%2046%29%20scale%28-1%20-1%29%22%20fill%3D%22none%22%20stroke%3D%22%23c9992a%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M3%2043V16C3%208%208%203%2016%203H43%22/%3E%3Cpath%20d%3D%22M9%2039V20c0-6%205-11%2011-11h19%22%20stroke-width%3D%221%22%20opacity%3D%22.8%22/%3E%3Ccircle%20cx%3D%2211%22%20cy%3D%2211%22%20r%3D%223%22%20fill%3D%22%23c9992a%22%20stroke%3D%22none%22/%3E%3Cpath%20d%3D%22M3%2024c4%200%206-2%206-6M24%203c0%204-2%206-6%206%22%20stroke-width%3D%221.2%22/%3E%3C/g%3E%3C/svg%3E") right bottom/46px 46px no-repeat;opacity:.9}
+.medal{position:absolute;left:50%;top:-34px;width:68px;height:68px;margin-left:-34px;border-radius:50%;display:grid;place-items:center;color:#fff;background:radial-gradient(circle at 32% 28%,#f6d36b,#d8a21f 55%,#a87a10);border:3px solid var(--cream);box-shadow:0 0 0 2px var(--gold),0 10px 22px rgba(90,50,5,.4);z-index:3}
+.medal::after{content:'';position:absolute;inset:-9px;border-radius:50%;border:1.5px dashed var(--gold);animation:spin 18s linear infinite}
+.medal svg{width:32px;height:32px;stroke-width:2.2;filter:drop-shadow(0 1px 1px rgba(90,40,0,.4))}
+.medal.pk{background:radial-gradient(circle at 32% 28%,#f77aa6,#d63a78 55%,#9c1450)}
+.medal.gr{background:radial-gradient(circle at 32% 28%,#58a064,#2e6b3a 55%,#173d24)}
+.medal .qm{font:700 52px/1 var(--script);margin-top:14px;font-style:normal}
+.card.green .medal{border-color:#173d24}
+
+/* details: info chips */
+.chips{list-style:none;display:grid;gap:10px;margin:14px auto 4px;max-width:430px;padding:0}
+.chips li{display:flex;align-items:center;gap:14px;padding:10px 16px 10px 10px;border-radius:50px;text-align:left;background:linear-gradient(90deg,#fff8e4,#fff2cf);border:1.5px solid rgba(201,153,42,.7);box-shadow:0 4px 12px rgba(120,70,10,.12);font-weight:600;color:var(--deep);line-height:1.35}
+.chips li svg{flex:none;width:40px;height:40px;padding:9px;border-radius:50%;color:#fff;background:linear-gradient(135deg,#ee4a88,#b01c5a);box-shadow:0 3px 8px rgba(176,28,90,.4)}
+.chips li:nth-child(2) svg{background:linear-gradient(135deg,#3f8a4f,#173d24)}
+.chips li:nth-child(3) svg{background:linear-gradient(135deg,#e6b83a,#a87a10)}
+
+/* clearer, bigger action buttons with icons */
+.btns{flex-direction:column;align-items:center;gap:14px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;width:min(100%,330px);min-height:56px;padding:14px 26px;font-size:clamp(14px,3.9vw,16px);font-weight:700;border:2px solid rgba(255,236,170,.95);box-shadow:0 10px 24px rgba(120,20,70,.4)}
+.btn svg{flex:none;width:24px;height:24px;padding:4px;border-radius:50%;background:rgba(255,255,255,.22);stroke-width:2.4}
+.btn.alt{box-shadow:0 10px 24px rgba(23,61,36,.45)}
+.btn.gl{box-shadow:0 10px 24px rgba(140,100,10,.45)}
+.btn:hover{transform:translateY(-4px) scale(1.04);filter:brightness(1.08)}
+
+/* next buttons: bigger, with a circular arrow badge */
+.nxt{padding:14px 18px 14px 26px!important;font-size:clamp(14px,3.8vw,16px)!important;border:2px solid #fff3c4!important;box-shadow:0 10px 24px rgba(168,122,16,.5)}
+.nxt svg{width:30px!important;height:30px!important;padding:6px;border-radius:50%;background:var(--deep);color:#fff!important;stroke:#fff!important}
+.card.green .nxt svg{background:#fff3c4;color:var(--deep)!important;stroke:var(--deep)!important}
+.cue.nxt{padding:10px 14px 10px 24px!important}
+
+/* gallery arrows */
+.gal{position:relative}
+.gnav{position:absolute;top:50%;z-index:4;width:46px;height:46px;margin-top:-23px;border-radius:50%;display:grid;place-items:center;color:#fff;background:rgba(193,31,99,.9);border:2px solid #ffe9a8;box-shadow:0 6px 16px rgba(0,0,0,.35);transition:transform .25s,background .25s}
+.gnav svg{width:24px;height:24px;stroke-width:3}
+.gnav.p{left:6px}.gnav.n{right:6px}
+.gnav:hover{transform:scale(1.15);background:#c11f63}
+.gnav:active{transform:scale(.92)}
+.gnav.n{animation:gpulse 2s ease-in-out infinite}
+@keyframes gpulse{50%{transform:translateX(4px)}}
+
+/* scene decorations */
+.hrts{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.hrts i{position:absolute;bottom:-40px;left:var(--x);font-style:normal;font-size:var(--s,22px);color:#e8456f;opacity:0;animation:rise var(--t,9s) ease-in infinite;animation-delay:var(--d,0s);text-shadow:0 0 10px rgba(255,120,160,.6)}
+@keyframes rise{0%{transform:translateY(0) scale(.6);opacity:0}12%{opacity:.9}100%{transform:translateY(-105vh) translateX(26px) scale(1.15);opacity:0}}
+.count div{position:relative;box-shadow:inset 0 0 18px rgba(245,197,66,.15);animation:cglow 3s ease-in-out infinite}
+.count div:nth-child(2){animation-delay:.4s}.count div:nth-child(3){animation-delay:.8s}.count div:nth-child(4){animation-delay:1.2s}
+@keyframes cglow{50%{border-color:#ffe08a;box-shadow:inset 0 0 22px rgba(245,197,66,.4),0 0 14px rgba(245,197,66,.45)}}
+.person p{font-weight:600}
+.person::after{content:'';display:block;width:34px;height:2px;margin:8px auto 0;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.sec>.garland{display:none}
+@media (min-width:1000px){.sec>.garland{display:block}}
+.quotes q{position:relative}
 /* ===== hero decoration ===== */
 .mandala{position:absolute;left:50%;top:50%;width:min(120vw,820px);aspect-ratio:1;margin:calc(min(120vw,820px) / -2) 0 0 calc(min(120vw,820px) / -2);background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20200%22%20fill%3D%22none%22%20stroke%3D%22%23b8891b%22%20stroke-width%3D%221.1%22%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2297%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2292%22%20stroke-dasharray%3D%222%204%22/%3E%3Cpath%20d%3D%22M100%20100C86%2072%2086%2034%20100%208C114%2034%20114%2072%20100%20100Z%22%20transform%3D%22rotate%280%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C86%2072%2086%2034%20100%208C114%2034%20114%2072%20100%20100Z%22%20transform%3D%22rotate%2830%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C86%2072%2086%2034%20100%208C114%2034%20114%2072%20100%20100Z%22%20transform%3D%22rotate%2860%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C86%2072%2086%2034%20100%208C114%2034%20114%2072%20100%20100Z%22%20transform%3D%22rotate%2890%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C86%2072%2086%2034%20100%208C114%2034%20114%2072%20100%20100Z%22%20transform%3D%22rotate%28120%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C86%2072%2086%2034%20100%208C114%2034%20114%2072%20100%20100Z%22%20transform%3D%22rotate%28150%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C86%2072%2086%2034%20100%208C114%2034%20114%2072%20100%20100Z%22%20transform%3D%22rotate%28180%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C86%2072%2086%2034%20100%208C114%2034%20114%2072%20100%20100Z%22%20transform%3D%22rotate%28210%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C86%2072%2086%2034%20100%208C114%2034%20114%2072%20100%20100Z%22%20transform%3D%22rotate%28240%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C86%2072%2086%2034%20100%208C114%2034%20114%2072%20100%20100Z%22%20transform%3D%22rotate%28270%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C86%2072%2086%2034%20100%208C114%2034%20114%2072%20100%20100Z%22%20transform%3D%22rotate%28300%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C86%2072%2086%2034%20100%208C114%2034%20114%2072%20100%20100Z%22%20transform%3D%22rotate%28330%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C92%2084%2092%2064%20100%2048C108%2064%20108%2084%20100%20100Z%22%20transform%3D%22rotate%2815%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C92%2084%2092%2064%20100%2048C108%2064%20108%2084%20100%20100Z%22%20transform%3D%22rotate%2845%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C92%2084%2092%2064%20100%2048C108%2064%20108%2084%20100%20100Z%22%20transform%3D%22rotate%2875%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C92%2084%2092%2064%20100%2048C108%2064%20108%2084%20100%20100Z%22%20transform%3D%22rotate%28105%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C92%2084%2092%2064%20100%2048C108%2064%20108%2084%20100%20100Z%22%20transform%3D%22rotate%28135%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C92%2084%2092%2064%20100%2048C108%2064%20108%2084%20100%20100Z%22%20transform%3D%22rotate%28165%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C92%2084%2092%2064%20100%2048C108%2064%20108%2084%20100%20100Z%22%20transform%3D%22rotate%28195%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C92%2084%2092%2064%20100%2048C108%2064%20108%2084%20100%20100Z%22%20transform%3D%22rotate%28225%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C92%2084%2092%2064%20100%2048C108%2064%20108%2084%20100%20100Z%22%20transform%3D%22rotate%28255%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C92%2084%2092%2064%20100%2048C108%2064%20108%2084%20100%20100Z%22%20transform%3D%22rotate%28285%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C92%2084%2092%2064%20100%2048C108%2064%20108%2084%20100%20100Z%22%20transform%3D%22rotate%28315%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C92%2084%2092%2064%20100%2048C108%2064%20108%2084%20100%20100Z%22%20transform%3D%22rotate%28345%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2230%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2218%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%280%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%2815%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%2830%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%2845%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%2860%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%2875%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%2890%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28105%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28120%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28135%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28150%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28165%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28180%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28195%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28210%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28225%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28240%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28255%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28270%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28285%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28300%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28315%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28330%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28345%20100%20100%29%22/%3E%3C/svg%3E") center/contain no-repeat;opacity:.3;pointer-events:none;animation:spin 140s linear infinite;z-index:0}
 .mandala.two{width:min(90vw,600px);margin:calc(min(90vw,600px) / -2) 0 0 calc(min(90vw,600px) / -2);opacity:.22;animation-direction:reverse;animation-duration:100s}
@@ -364,7 +419,9 @@ html[lang=te] .hero>.txt{padding-left:6px!important;padding-right:6px!important}
 
 <!-- blessing -->
 <section class="sec" id="blessing" data-bg="1">
+  <div class="garland g1"></div><div class="garland g2"></div><div class="garland g3"></div><div class="garland g4"></div>
   <div class="card">
+    <div class="medal " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-4-2-7-5-7-9 3 0 5 1 7 3 2-2 4-3 7-3 0 4-3 7-7 9z"/><path d="M12 15c-2-2-2-6 0-10 2 4 2 8 0 10z"/></svg></div>
     <div class="ganesha rv z"><img data-img="ganesha" alt="Lord Ganesha"></div>
     <p class="caps rv" data-t="ganesh">Shree Ganeshaya Namaha</p>
     <h2 class="script gold rv" style="--d:.1s" data-t="b_h">Two Hearts, One Journey</h2>
@@ -381,7 +438,9 @@ html[lang=te] .hero>.txt{padding-left:6px!important;padding-right:6px!important}
 
 <!-- couple -->
 <section class="sec" id="couple" data-bg="3">
+  <div class="hrts"><i style="--x:6%;--s:20px;--t:9s;--d:0s">♥</i><i style="--x:18%;--s:28px;--t:11s;--d:2.5s">♥</i><i style="--x:30%;--s:16px;--t:8s;--d:5s">♥</i><i style="--x:44%;--s:24px;--t:10s;--d:1s">♥</i><i style="--x:58%;--s:18px;--t:9s;--d:4s">♥</i><i style="--x:70%;--s:30px;--t:12s;--d:6.5s">♥</i><i style="--x:82%;--s:20px;--t:8.5s;--d:3s">♥</i><i style="--x:93%;--s:26px;--t:10.5s;--d:7.5s">♥</i></div>
   <div class="card">
+    <div class="medal pk" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="14" r="5"/><circle cx="15" cy="14" r="5"/><path d="M12 3l1.6 2.4L12 8 10.4 5.4z"/></svg></div>
     <p class="caps rv" data-t="c_cap">The Bride &amp; The Groom</p>
     <h2 class="script gold rv" style="--d:.1s" data-t="c_h">Meet the Couple</h2>
     <div class="pair">
@@ -404,6 +463,7 @@ html[lang=te] .hero>.txt{padding-left:6px!important;padding-right:6px!important}
 <!-- countdown -->
 <section class="sec" id="countdown" data-bg="2">
   <div class="card green">
+    <div class="medal " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h12M6 22h12M7 2v4a5 5 0 0 0 2 4l3 2-3 2a5 5 0 0 0-2 4v4M17 2v4a5 5 0 0 1-2 4l-3 2 3 2a5 5 0 0 1 2 4v4"/></svg></div>
     <p class="caps rv" data-t="cd_cap">The Big Day Is Almost Here</p>
     <h2 class="script rv" style="--d:.1s;color:var(--yellow)" data-t="cd_h">Counting Every Moment</h2>
     <div class="count rv" style="--d:.2s" id="cd">
@@ -419,6 +479,7 @@ html[lang=te] .hero>.txt{padding-left:6px!important;padding-right:6px!important}
 <!-- details -->
 <section class="sec" id="details" data-bg="3">
   <div class="card">
+    <div class="medal gr" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4M12 13v5M9.5 15.5h5"/></svg></div>
     <p class="caps rv" data-t="d_cap">Join us for the wedding ceremony</p>
     <h2 class="script gold rv" style="--d:.1s" data-t="d_h">Wedding Details</h2>
     <div class="datebox rv" style="--d:.2s">
@@ -426,14 +487,15 @@ html[lang=te] .hero>.txt{padding-left:6px!important;padding-right:6px!important}
       <div class="big gold">29</div>
       <div class="side"><span data-t="d_thu">THURSDAY</span><span data-t="d_time">7:30 PM</span></div>
     </div>
-    <div class="info rv" style="--d:.3s">
-      <p class="caps" style="margin-bottom:6px" data-t="d_venue">Venue</p>
-      <p data-t="d_tap">Tap below to see the wedding venue on the map</p>
-    </div>
+    <ul class="chips rv" style="--d:.3s">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span data-t="d_date">Thursday, 29 October 2026</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg><span data-t="d_t2">Evening 7:30 PM</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.6"/></svg><span data-t="d_loc">Venue: tap “View Location” below</span></li>
+    </ul>
     <div class="btns rv" style="--d:.4s">
-      <a class="btn" href="https://maps.app.goo.gl/gnEKSBtn6V2Fuk1o9" target="_blank" rel="noopener" data-t="d_view">View Location</a>
-      <button class="btn alt" id="cal" data-t="d_cal">Add to Calendar</button>
-      <button class="btn gl" id="share" data-t="d_share">Share Invitation</button>
+      <a class="btn" href="https://maps.app.goo.gl/gnEKSBtn6V2Fuk1o9" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.6"/></svg><span data-t="d_view">View Location</span></a>
+      <button class="btn alt" id="cal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4M12 13v5M9.5 15.5h5"/></svg><span data-t="d_cal">Add to Calendar</span></button>
+      <button class="btn gl" id="share"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.3 10.8l7.4-4.3M8.3 13.2l7.4 4.3"/></svg><span data-t="d_share">Share Invitation</span></button>
     </div>
   </div>
 </section>
@@ -441,9 +503,11 @@ html[lang=te] .hero>.txt{padding-left:6px!important;padding-right:6px!important}
 <!-- gallery -->
 <section class="sec" id="gallery" data-bg="1">
   <div class="card">
+    <div class="medal pk" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.6"/></svg></div>
     <p class="caps rv" data-t="g_cap">Moments of Joy</p>
     <h2 class="script gold rv" style="--d:.1s" data-t="g_h">Our Gallery</h2>
     <div class="gal rv" style="--d:.2s">
+      <button class="gnav p" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button class="gnav n" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
       <div class="car swipe" id="gcar">
         <figure><img data-img="couple" alt="Dhanusha and Madhu"><figcaption><span data-t="g_c1">Dhanusha &amp; Madhu</span><small data-t="g_t1">TOGETHER FOREVER</small></figcaption></figure>
         <figure><img data-img="bride" alt="Dhanusha"><figcaption><span data-t="g_c2">Eligenti Dhanusha Devi</span><small data-t="g_bride">THE BRIDE</small></figcaption></figure>
@@ -458,6 +522,7 @@ html[lang=te] .hero>.txt{padding-left:6px!important;padding-right:6px!important}
 <!-- quotes -->
 <section class="sec" id="quotes" data-bg="2">
   <div class="card" style="width:min(94vw,680px)">
+    <div class="medal gr" aria-hidden="true"><span class="qm">&ldquo;</span></div>
     <p class="caps rv" data-t="q_cap">Words of Love</p>
     <h2 class="script gold rv" style="--d:.1s" data-t="q_h">With Blessings</h2>
     <blockquote class="quotes rv z" style="--d:.2s"><q data-t="q_q">Today, two hearts become one and two families become one family. With joyful hearts and folded hands, we invite you to bless our Dhanusha and Madhu. May their love grow stronger with every sunrise, and may your presence and blessings make their special day truly unforgettable.</q><cite data-t="q_c">— Eligenti Veerabhadra Rao<br>Eligenti Mangaveni</cite></blockquote>
@@ -466,7 +531,9 @@ html[lang=te] .hero>.txt{padding-left:6px!important;padding-right:6px!important}
 
 <!-- footer -->
 <section class="sec foot" id="end" data-bg="3">
+  <div class="garland g1"></div><div class="garland g2"></div><div class="garland g3"></div><div class="garland g4"></div>
   <div class="card">
+    <div class="medal pk" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-8-5.3-8-11a4.5 4.5 0 0 1 8-2.7A4.5 4.5 0 0 1 20 10c0 5.7-8 11-8 11z"/></svg></div>
     <p class="caps rv" data-t="e_cap">With love &amp; blessings</p>
     <h2 class="script gold rv" style="--d:.1s" data-t="e_h">See You at the Wedding!</h2>
     <div class="orn rv"><i>✿</i></div>
@@ -474,6 +541,10 @@ html[lang=te] .hero>.txt{padding-left:6px!important;padding-right:6px!important}
       We can't wait to celebrate with you.<br>Thank you for being part of our story.
     </p>
     <p class="script pink rv" style="--d:.3s;font-size:clamp(36px,8vw,56px);margin-top:18px" data-t="e_names">Dhanusha <span class="heart">♥</span> Madhu</p>
+    <div class="btns rv" style="--d:.4s;margin-top:22px">
+      <a class="btn" href="https://maps.app.goo.gl/gnEKSBtn6V2Fuk1o9" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.6"/></svg><span data-t="e_map">Get Directions</span></a>
+      <button class="btn gl" id="share2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.3 10.8l7.4-4.3M8.3 13.2l7.4 4.3"/></svg><span data-t="d_share">Share Invitation</span></button>
+    </div>
     <footer><small>29 · 10 · 2026</small></footer>
   </div>
 </section>
@@ -504,7 +575,6 @@ const IMG = {"couple": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDA
   }
   $('#open').onclick = openGate;
   $('#gan').onclick = openGate;
-  if (location.hash === '#open') { openGate(); $$('.rv,.card').forEach(e => e.classList.add('in', 'settled')); }
 
   /* ---------- next / back buttons on every screen ---------- */
   const secs = $$('main .sec');
@@ -554,6 +624,10 @@ const IMG = {"couple": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDA
     d_oct: 'అక్టోబర్',
     d_thu: 'గురువారం',
     d_time: 'రాత్రి 7:30',
+    d_date: 'గురువారం, 29 అక్టోబర్ 2026',
+    d_t2: 'రాత్రి 7:30 గంటలకు',
+    d_loc: 'వేదిక: కింద “లొకేషన్ చూడండి” నొక్కండి',
+    e_map: 'దారి చూడండి',
     d_venue: 'వేదిక',
     d_tap: 'వివాహ వేదికను మ్యాప్‌లో చూడటానికి కింద నొక్కండి',
     d_view: 'లొకేషన్ చూడండి',
@@ -632,6 +706,13 @@ const IMG = {"couple": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDA
     if (userMuted) yt.pauseVideo(); else yt.playVideo();
   };
   document.addEventListener('visibilitychange', () => { if (!ytReady || userMuted || !wantPlay) return; document.hidden ? yt.pauseVideo() : yt.playVideo(); });
+
+  /* ---------- gallery arrow buttons ---------- */
+  const gcar = $('#gcar');
+  $$('.gnav').forEach(b => b.onclick = () => {
+    const w = gcar.clientWidth, n = gcar.children.length, i = Math.round(gcar.scrollLeft / w), to = b.classList.contains('n') ? i + 1 : i - 1;
+    gcar.scrollTo({ left: ((to % n) + n) % n * w, behavior: reduce ? 'auto' : 'smooth' });
+  });
 
   /* ---------- background follows the section in view ---------- */
   const bio = new IntersectionObserver(es => es.forEach(e => {
@@ -769,11 +850,12 @@ const IMG = {"couple": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDA
       href: URL.createObjectURL(new Blob([ics], { type: 'text/calendar' })), download: 'wedding.ics' });
     a.click();
   };
-  $('#share').onclick = () => {
+  const doShare = () => {
     const d = { title: 'Wedding Invitation', text: L('share'), url: location.href };
     navigator.share ? navigator.share(d).catch(() => {}) :
       window.open('https://wa.me/?text=' + encodeURIComponent(d.text + ' ' + d.url), '_blank');
   };
+  $$('#share,#share2').forEach(b => b.onclick = doShare);
 
   /* ---------- cinematic: scroll progress, parallax, tilt ---------- */
   const root = document.documentElement;
@@ -936,6 +1018,7 @@ const IMG = {"couple": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDA
       lastPop = Date.now() + 4000;
     };
   }
+  if (location.hash === '#open') { openGate(); $$('.rv,.card').forEach(e => e.classList.add('in', 'settled')); }
 })();
 </script>
 </body>
