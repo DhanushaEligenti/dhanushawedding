@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="te">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -563,8 +563,7 @@ const IMG = {"couple": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDA
   $$('#lang button').forEach(b => b.onclick = () => { if (b.dataset.l !== lang) setLang(b.dataset.l); });
   let saved = null;
   try { saved = new URLSearchParams(location.search).get('lang') || localStorage.getItem('wedlang'); } catch (e) {}
-  if (!saved && /^te/i.test(navigator.language || '')) saved = 'te';
-  if (saved === 'te') setLang('te');
+  setLang(saved === 'en' ? 'en' : 'te');   // Telugu is the default; English only if chosen via the toggle or ?lang=en
 
   /* ---------- background music: YouTube player, audio only, loops from 0:02 ---------- */
   const VID = 'TqrPYfn1yUM', START = 2, musicBtn = $('#music');
