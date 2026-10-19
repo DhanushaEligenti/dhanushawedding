@@ -74,6 +74,13 @@ button{font:inherit;border:0;background:none;color:inherit}
 #gate.open .box{opacity:0;transform:scale(.92)}
 #gate .ganesha{width:min(58vw,230px);margin:0 auto 20px;cursor:pointer;animation:breathe 2.6s ease-in-out infinite}
 @keyframes breathe{50%{transform:scale(1.05)}}
+.open-btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-width:min(78%,240px);padding:17px 38px;font-size:clamp(18px,5vw,22px)!important;letter-spacing:.3em!important;font-weight:700;border:2px solid #ffe08a;background:linear-gradient(135deg,#ee4a88,#c11f63 55%,#9c1450);box-shadow:0 10px 26px rgba(193,31,99,.5),0 0 0 0 rgba(238,74,136,.55);animation:popBtn 2.2s ease-in-out infinite,ripple 2.2s ease-out infinite}
+.open-btn svg{width:26px;height:26px;flex:none;animation:arrowGo 1.2s ease-in-out infinite}
+@keyframes arrowGo{0%,100%{transform:translateX(0)}50%{transform:translateX(8px)}}
+@keyframes popBtn{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+@keyframes ripple{0%{box-shadow:0 10px 26px rgba(193,31,99,.5),0 0 0 0 rgba(238,74,136,.6)}70%,100%{box-shadow:0 10px 26px rgba(193,31,99,.5),0 0 0 22px rgba(238,74,136,0)}}
+.open-btn:hover{animation-play-state:paused;transform:scale(1.1)}
+.open-btn:active{animation:none;transform:scale(.95)}
 @keyframes pulse{50%{transform:scale(1.07)}}
 
 /* typography helpers */
@@ -262,7 +269,7 @@ footer small{display:block;margin-top:18px;opacity:.75;font-size:.75em}
     <p class="caps">Shree Ganeshaya Namaha</p>
     <h1 class="script gold" style="font-size:clamp(34px,9vw,50px);margin:8px 0">You are invited</h1>
     <p style="font-style:italic;margin-bottom:20px">to a celebration of love</p>
-    <button class="btn" id="open">Seek Blessings &amp; Open</button>
+    <button class="btn open-btn" id="open" aria-label="Open invitation"><span>Open</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
   </div>
 </div>
 
