@@ -357,6 +357,8 @@ html[lang=te] .ev-title{font-style:normal;line-height:1.55}
 #scrollhint{position:fixed;right:10px;bottom:14px;z-index:9400;width:44px;height:44px;border-radius:50%;display:none;place-items:center;color:#fff;background:linear-gradient(135deg,#ee4a88,#b01c5a);border:2px solid #ffe9a8;box-shadow:0 6px 16px rgba(120,20,70,.45);transition:opacity .4s,transform .3s}
 #scrollhint svg{width:22px;height:22px;stroke-width:3;animation:nudge 1s ease-in-out infinite}
 #scrollhint::before{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--pink);opacity:0;animation:mring 2s ease-out infinite}
+#scrollhint .hand{position:absolute;left:50%;bottom:calc(100% + 2px);margin-left:-15px;width:30px;text-align:center;font-size:28px;line-height:1;pointer-events:none;filter:drop-shadow(0 3px 4px rgba(90,40,0,.45));animation:handPoint 1s ease-in-out infinite}
+@keyframes handPoint{0%,100%{transform:translateY(-6px)}50%{transform:translateY(5px)}}
 #scrollhint.off{opacity:0;pointer-events:none;transform:scale(.6)}
 #scrollhint:active{transform:scale(.92)}
 @media (max-width:700px){body:not(.locked) #scrollhint{display:grid}}
@@ -416,7 +418,7 @@ html[lang=te] .ev-title{font-style:normal;line-height:1.55}
 <div id="prog"></div>
 <div id="yt"></div>
 <button id="music" aria-label="Music on/off" title="Music"><svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></svg><svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/><path d="M3 3l18 18"/></svg></button>
-<button id="scrollhint" class="off" aria-label="Scroll down"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+<button id="scrollhint" class="off" aria-label="Scroll down"><span class="hand" aria-hidden="true">👇</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
 <div id="lang" role="group" aria-label="Language"><i></i><button data-l="en" class="on">EN</button><button data-l="te">తెలుగు</button></div><div class="vig"></div>
 <div class="bgl" id="bg1" style="background-image:var(--img-bg1)"></div><div class="bgl on" id="bg2" style="background-image:var(--img-bg2)"></div><div class="bgl" id="bg3" style="background-image:var(--img-bg3)"></div><div class="rays"></div>
 <div id="ring"></div>
