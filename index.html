@@ -347,7 +347,8 @@ html[lang=te] .ev-title{font-style:normal;line-height:1.55}
 /* mobile: first-section spacing + scroll-down hint */
 @media (max-width:700px){
   .sec.hero{flex-direction:column;justify-content:center;padding:62px 12px 20px;gap:0}
-  .hero>.cue{position:relative!important;bottom:auto!important;left:auto!important;translate:none!important;margin:16px 0 0!important;flex:none}
+  .hero>.cue{position:relative!important;bottom:auto!important;left:auto!important;translate:none!important;margin:16px 0 0!important;flex:none;font-size:13px!important;letter-spacing:.06em!important;padding:10px 12px 10px 18px!important;gap:8px!important}
+  .hero>.cue svg{width:26px!important;height:26px!important}
   .hero>.txt{padding-top:6px!important;padding-bottom:6px!important}
   .hero .dvd{margin:10px auto 2px}
   .hero .when{margin-top:14px}
@@ -768,7 +769,7 @@ const IMG = {"couple": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDA
   /* ---------- scroll-down hint (mobile): jumps to the next section, hidden on the last one ---------- */
   const hint = $('#scrollhint'), secList = $$('main .sec');
   const nextSec = () => secList.find(el => el.getBoundingClientRect().top > innerHeight * .35);
-  function updHint() { hint.classList.toggle('off', !nextSec() || scrollY < innerHeight * .4 || scrollY + innerHeight >= root.scrollHeight - 40); }   // the first screen has its own button
+  function updHint() { hint.classList.toggle('off', !nextSec() || scrollY + innerHeight >= root.scrollHeight - 40); }
   hint.onclick = () => { const t = nextSec(); if (t) t.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); };
   addEventListener('scroll', updHint, { passive: true }); addEventListener('resize', updHint); setTimeout(updHint, 3200);
 
