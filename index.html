@@ -362,6 +362,29 @@ html[lang=te] .ev-title{font-style:normal;line-height:1.55}
 #scrollhint.off{opacity:0;pointer-events:none;transform:scale(.6)}
 #scrollhint:active{transform:scale(.92)}
 @media (max-width:700px){body:not(.locked) #scrollhint{display:grid}}
+
+/* full-screen "swipe up" notice (mobile, first screen, 5 seconds) */
+#swipeintro{position:fixed;inset:0;z-index:9450;display:none;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;color:#fff3c9;background:radial-gradient(ellipse at center,rgba(36,14,0,.78),rgba(16,6,0,.9));opacity:0;visibility:hidden;transition:opacity .6s ease,visibility 0s .6s}
+#swipeintro.show{opacity:1;visibility:visible;transition:opacity .6s ease}
+@media (max-width:700px){#swipeintro{display:flex}}
+#swipeintro .col{position:relative;width:90px;height:230px}
+#swipeintro .chev{position:absolute;left:50%;width:34px;height:34px;margin-left:-17px;opacity:0;stroke:#ffd86b;stroke-width:3.5;fill:none;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 8px rgba(255,200,60,.9))}
+#swipeintro.show .chev{animation:chevUp 1.6s ease-out infinite}
+#swipeintro .chev:nth-child(1){top:0;animation-delay:.5s!important}
+#swipeintro .chev:nth-child(2){top:38px;animation-delay:.25s!important}
+#swipeintro .chev:nth-child(3){top:76px}
+@keyframes chevUp{0%{opacity:0;transform:translateY(24px)}40%{opacity:1}100%{opacity:0;transform:translateY(-14px)}}
+#swipeintro .fing{position:absolute;left:50%;bottom:0;margin-left:-34px;width:68px;font-size:62px;line-height:1;text-align:center;filter:drop-shadow(0 6px 10px rgba(0,0,0,.5))}
+#swipeintro.show .fing{animation:swipeUp 1.6s cubic-bezier(.4,0,.2,1) infinite}
+@keyframes swipeUp{0%{transform:translateY(34px) scale(.9);opacity:0}15%{opacity:1;transform:translateY(34px) scale(.85)}70%{transform:translateY(-72px) scale(1)}100%{transform:translateY(-92px) scale(1);opacity:0}}
+#swipeintro .t1{font:italic 700 clamp(26px,7.4vw,34px)/1.35 var(--script);color:#ffe08a;text-shadow:0 2px 12px rgba(0,0,0,.6);padding:0 24px}
+#swipeintro .t2{font:600 14px/1.5 var(--caps);letter-spacing:.2em;text-transform:uppercase;opacity:.9;padding:0 24px}
+html[lang=te] #swipeintro .t1{font-style:normal;line-height:1.6}
+html[lang=te] #swipeintro .t2{letter-spacing:0;text-transform:none;font-size:16px}
+#swipeintro .bar{width:min(60vw,220px);height:4px;border-radius:4px;margin-top:14px;background:rgba(255,255,255,.25);overflow:hidden}
+#swipeintro .bar i{display:block;height:100%;width:100%;transform-origin:0 50%;background:linear-gradient(90deg,#f5c542,#ee4a88)}
+#swipeintro.show .bar i{animation:barRun 5s linear forwards}
+@keyframes barRun{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 /* ===== hero decoration ===== */
 .mandala{position:absolute;left:50%;top:50%;width:min(120vw,820px);aspect-ratio:1;margin:calc(min(120vw,820px) / -2) 0 0 calc(min(120vw,820px) / -2);background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20200%22%20fill%3D%22none%22%20stroke%3D%22%23b8891b%22%20stroke-width%3D%221.1%22%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2297%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2292%22%20stroke-dasharray%3D%222%204%22/%3E%3Cpath%20d%3D%22M100%20100C86%2072%2086%2034%20100%208C114%2034%20114%2072%20100%20100Z%22%20transform%3D%22rotate%280%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C86%2072%2086%2034%20100%208C114%2034%20114%2072%20100%20100Z%22%20transform%3D%22rotate%2830%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C86%2072%2086%2034%20100%208C114%2034%20114%2072%20100%20100Z%22%20transform%3D%22rotate%2860%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C86%2072%2086%2034%20100%208C114%2034%20114%2072%20100%20100Z%22%20transform%3D%22rotate%2890%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C86%2072%2086%2034%20100%208C114%2034%20114%2072%20100%20100Z%22%20transform%3D%22rotate%28120%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C86%2072%2086%2034%20100%208C114%2034%20114%2072%20100%20100Z%22%20transform%3D%22rotate%28150%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C86%2072%2086%2034%20100%208C114%2034%20114%2072%20100%20100Z%22%20transform%3D%22rotate%28180%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C86%2072%2086%2034%20100%208C114%2034%20114%2072%20100%20100Z%22%20transform%3D%22rotate%28210%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C86%2072%2086%2034%20100%208C114%2034%20114%2072%20100%20100Z%22%20transform%3D%22rotate%28240%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C86%2072%2086%2034%20100%208C114%2034%20114%2072%20100%20100Z%22%20transform%3D%22rotate%28270%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C86%2072%2086%2034%20100%208C114%2034%20114%2072%20100%20100Z%22%20transform%3D%22rotate%28300%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C86%2072%2086%2034%20100%208C114%2034%20114%2072%20100%20100Z%22%20transform%3D%22rotate%28330%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C92%2084%2092%2064%20100%2048C108%2064%20108%2084%20100%20100Z%22%20transform%3D%22rotate%2815%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C92%2084%2092%2064%20100%2048C108%2064%20108%2084%20100%20100Z%22%20transform%3D%22rotate%2845%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C92%2084%2092%2064%20100%2048C108%2064%20108%2084%20100%20100Z%22%20transform%3D%22rotate%2875%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C92%2084%2092%2064%20100%2048C108%2064%20108%2084%20100%20100Z%22%20transform%3D%22rotate%28105%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C92%2084%2092%2064%20100%2048C108%2064%20108%2084%20100%20100Z%22%20transform%3D%22rotate%28135%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C92%2084%2092%2064%20100%2048C108%2064%20108%2084%20100%20100Z%22%20transform%3D%22rotate%28165%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C92%2084%2092%2064%20100%2048C108%2064%20108%2084%20100%20100Z%22%20transform%3D%22rotate%28195%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C92%2084%2092%2064%20100%2048C108%2064%20108%2084%20100%20100Z%22%20transform%3D%22rotate%28225%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C92%2084%2092%2064%20100%2048C108%2064%20108%2084%20100%20100Z%22%20transform%3D%22rotate%28255%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C92%2084%2092%2064%20100%2048C108%2064%20108%2084%20100%20100Z%22%20transform%3D%22rotate%28285%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C92%2084%2092%2064%20100%2048C108%2064%20108%2084%20100%20100Z%22%20transform%3D%22rotate%28315%20100%20100%29%22/%3E%3Cpath%20d%3D%22M100%20100C92%2084%2092%2064%20100%2048C108%2064%20108%2084%20100%20100Z%22%20transform%3D%22rotate%28345%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2230%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2218%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%280%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%2815%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%2830%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%2845%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%2860%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%2875%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%2890%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28105%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28120%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28135%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28150%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28165%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28180%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28195%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28210%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28225%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28240%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28255%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28270%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28285%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28300%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28315%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28330%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%224%22%20r%3D%222.2%22%20fill%3D%22%23b8891b%22%20transform%3D%22rotate%28345%20100%20100%29%22/%3E%3C/svg%3E") center/contain no-repeat;opacity:.3;pointer-events:none;animation:spin 140s linear infinite;z-index:0}
 .mandala.two{width:min(90vw,600px);margin:calc(min(90vw,600px) / -2) 0 0 calc(min(90vw,600px) / -2);opacity:.22;animation-direction:reverse;animation-duration:100s}
@@ -418,6 +441,12 @@ html[lang=te] .ev-title{font-style:normal;line-height:1.55}
 <div id="prog"></div>
 <div id="yt"></div>
 <button id="music" aria-label="Music on/off" title="Music"><svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></svg><svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/><path d="M3 3l18 18"/></svg></button>
+<div id="swipeintro" aria-hidden="true">
+  <div class="col"><svg class="chev" viewBox="0 0 24 24"><path d="M5 15l7-7 7 7"/></svg><svg class="chev" viewBox="0 0 24 24"><path d="M5 15l7-7 7 7"/></svg><svg class="chev" viewBox="0 0 24 24"><path d="M5 15l7-7 7 7"/></svg><span class="fing">👆</span></div>
+  <p class="t1" data-t="sw1">Swipe up to continue</p>
+  <p class="t2" data-t="sw2">Scroll down to see the invitation</p>
+  <div class="bar"><i></i></div>
+</div>
 <button id="scrollhint" class="off" aria-label="Scroll down"><span class="hand" aria-hidden="true">👇</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
 <div id="lang" role="group" aria-label="Language"><i></i><button data-l="en" class="on">EN</button><button data-l="te">తెలుగు</button></div><div class="vig"></div>
 <div class="bgl" id="bg1" style="background-image:var(--img-bg1)"></div><div class="bgl on" id="bg2" style="background-image:var(--img-bg2)"></div><div class="bgl" id="bg3" style="background-image:var(--img-bg3)"></div><div class="rays"></div>
@@ -618,6 +647,7 @@ const IMG = {"couple": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDA
     document.body.classList.add('opened');
     document.body.classList.remove('locked');
     setTimeout(() => { gate.remove(); removeEventListener('resize', fitGate); }, 2900);
+    setTimeout(() => window.__showSwipe && window.__showSwipe(), 3300);
     startReveal();
   }
   $('#open').onclick = openGate;
@@ -675,6 +705,8 @@ const IMG = {"couple": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDA
     ev2_time: 'సమయం : రాత్రి 7:30',
     ev2_meal: 'తరువాత రాత్రి భోజనం',
     ev2_place: 'గొడ్డేటి పాలెం',
+    sw1: 'కొనసాగడానికి పైకి స్వైప్ చేయండి',
+    sw2: 'ఆహ్వానం చూడటానికి కిందికి స్క్రోల్ చేయండి',
     d_oct: 'అక్టోబర్',
     d_thu: 'గురువారం',
     d_time: 'రాత్రి 7:30',
@@ -774,6 +806,20 @@ const IMG = {"couple": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDA
   function updHint() { hint.classList.toggle('off', !nextSec() || scrollY + innerHeight >= root.scrollHeight - 40); }
   hint.onclick = () => { const t = nextSec(); if (t) t.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); };
   addEventListener('scroll', updHint, { passive: true }); addEventListener('resize', updHint); setTimeout(updHint, 3200);
+
+  /* ---------- swipe-up notice: 5 s on the first screen, mobile only ---------- */
+  const swIntro = $('#swipeintro');
+  let swShown = false;
+  function hideSwipe() { swIntro.classList.remove('show'); }
+  function showSwipe() {
+    if (swShown || scrollY > 40 || !matchMedia('(max-width:700px)').matches) return;
+    swShown = true; swIntro.classList.add('show');
+    const t = setTimeout(hideSwipe, 5000);
+    const stop = () => { clearTimeout(t); hideSwipe(); removeEventListener('scroll', stop); };
+    addEventListener('scroll', stop, { passive: true });
+    swIntro.addEventListener('pointerdown', stop, { once: true });
+  }
+  window.__showSwipe = showSwipe;
 
   /* ---------- background follows the section in view ---------- */
   const bio = new IntersectionObserver(es => es.forEach(e => {
